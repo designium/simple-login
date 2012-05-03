@@ -20,13 +20,13 @@ Or install it yourself as:
 
 Once you've added the gem into your Gemfile, you only need to run the following command:
 
-rails g simple_login
+    rails g simple_login
 
 Rails will generate the login and view files.
 
 Then run:
 
-rake db:migrate
+    rake db:migrate
 
 The user table will be created.
 
@@ -34,10 +34,10 @@ I also recommend activating the root_path.
 
 To add the links to your app just add the following paths:
 
-signup_path
-login_path
-logout_path
-password_reset_path
+    signup_path
+    login_path
+    logout_path
+    password_reset_path
 
 ## Contributing
 
