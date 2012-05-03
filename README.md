@@ -39,6 +39,21 @@ To add the links to your app just add the following paths:
     logout_path
     password_reset_path
 
+## Out of the box use
+
+You can run
+
+    rails s
+
+Open your browser and access http://localhost:3000
+
+Then you can access the following routes:
+
+    http://localhost:3000/signup
+    http://localhost:3000/login
+    http://localhost:3000/logout
+    http://localhost:3000/password_reset
+
 ## Contributing
 
 1. Fork it
