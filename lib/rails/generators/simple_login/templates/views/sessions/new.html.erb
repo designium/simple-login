@@ -1,0 +1,31 @@
+<!-- Login Non Modal -->
+
+<div class="container">
+  <div class="row">
+    <div class="span4 offset4 well">
+      <%= form_tag (sessions_path), class: "form" do %>
+        <fieldset>
+          <legend>Login</legend>
+          <div class="control-group">
+            <%= label_tag :email, nil ,class: "control-label" %>
+            <div class="controls"><%= text_field_tag :email, params[:email], class: "input-xlarge" %></div>
+          </div>
+          <div class="control-group">
+            <%= label_tag :password, nil, class: "control-label"  %>
+            <div class="controls"><%= password_field_tag (:password), nil ,class: "input-xlarge" %></div>
+          </div>
+          <div class="control-group">
+            <%= label_tag :remember_me, nil, class: "control-label"  %>
+            <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+          </div>
+          <div class="actions"><%= submit_tag t("user.log_in", default: "Log in"), class: "btn btn-large btn-primary" %></div>
+        </fieldset>
+      <% end %>
+        <%= link_to t("user.forgotten_password", default: "Forgotten password?"), new_password_reset_path %> - <%= link_to t("user.sign_up", default: "Sign Up"), new_user_path %>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- End of Login Non Modal -->

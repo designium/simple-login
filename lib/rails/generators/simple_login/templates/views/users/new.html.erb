@@ -1,0 +1,40 @@
+<!-- Sign UP Non Modal -->
+<div class="container">
+  <div class="row center">
+    <h1 style="margin-bottom: 20px;">Sign Up</h1>
+  </div>
+  <div class="row">
+    <div class="span4 offset4 well">
+      <%= form_for @user, html: {class: "form"} do |f| %>
+        <% if @user.errors.any? %>
+          <div class="alert alert-error">
+            <h2>Form is invalid</h2>
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <fieldset>
+          <legend>Sign Up</legend>
+          <div class="control-group">
+            <%= f.label :email, nil ,class: "control-label" %>
+            <div class="controls"><%= f.text_field :email, class: "input-xlarge" %></div>
+          </div>
+          <div class="control-group">
+            <%= f.label :password, nil ,class: "control-label" %>
+            <div class="controls"><%= f.password_field :password, class: "input-xlarge" %></div>
+          </div>
+          <div class="control-group">
+            <%= f.label :password_confirmation, nil ,class: "control-label" %>
+            <div class="controls"><%= f.password_field :password_confirmation, class: "input-xlarge" %></div>
+          </div>
+          
+          <div class="actions"><%= f.submit t("user.sign_up", default: "Sign Up"), class: "btn btn-large btn-primary"  %></div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- End of Sing UP Non Modal -->

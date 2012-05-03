@@ -1,0 +1,6 @@
+************************************************
+    simple-login is Rails 3 login generator
+************************************************
+
+Example:
+    rails g simple_login 

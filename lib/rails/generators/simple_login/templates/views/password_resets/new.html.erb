@@ -1,0 +1,20 @@
+<!-- Reset Non Modal -->
+
+<div class="container">
+  <div class="row">
+    <div class="span4 offset4 well">
+      <%= form_tag password_resets_path, :method => :post do %>
+        <fieldset>
+          <legend>Reset Password</legend>
+            <div class="control-group">
+              <%= label_tag :email, nil, class: "control-label" %>
+              <div class="controls"><%= text_field_tag :email, params[:email] %></div>
+            </div>
+            <div class="actions"><%= submit_tag t("user.reset_password", default: "Reset password"), class: "btn btn-large btn-primary" %></div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- End of Reset Non Modal -->

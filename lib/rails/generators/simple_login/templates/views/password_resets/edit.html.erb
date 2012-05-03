@@ -1,0 +1,35 @@
+<!-- Edit password Non Modal -->
+<div class="container">
+  <div class="row center">
+    <h1 style="margin-bottom: 20px;">Change Password</h1>
+  </div>
+  <div class="row">
+    <div class="span4 offset4 well">
+      <%= form_for @user,  :url => password_reset_path(params[:id]), html: {class: "form"}  do |f| %>
+        <% if @user.errors.any? %>
+          <div class="alert alert-error">
+            <h2>Form is invalid</h2>
+            <ul>
+              <% for message in @user.errors.full_messages %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <fieldset>
+            <legend>Change Password</legend>
+          <div class="control-group">
+            <%= f.label :password, nil ,class: "control-label"  %>
+            <div class="controls"><%= f.password_field :password %></div>
+          </div>
+          <div class="control-group">
+            <%= f.label :password_confirmation, nil ,class: "control-label"  %>
+            <div class="controls"><%= f.password_field :password_confirmation %></div>
+          </div>
+          <div class="actions"><%= f.submit "Update Password", class: "btn btn-large btn-primary" %></div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- End of Edit Password Non Modal -->
