@@ -2,6 +2,10 @@
 
 simple_login creates a basic and simple login system for Rails 3 apps. It is based on Railscasts Authentication from Scratch videos.
 
+# Demo
+
+    http://gentle-samurai-9768.heroku.com/signup
+
 ## Installation
 
 Add this line to your application's Gemfile:
