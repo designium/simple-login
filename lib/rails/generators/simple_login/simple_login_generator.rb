@@ -35,7 +35,7 @@ module SimpleLogin
       end
 
       def create_user
-        generate("model", "users email:string password_digest:string auth_token:string password_reset_token:string password_reset_sent_at:datetime")
+        generate("model", "user email:string password_digest:string auth_token:string password_reset_token:string password_reset_sent_at:datetime")
         rake("db:migrate")
       end
 

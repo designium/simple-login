@@ -1,5 +1,7 @@
 # SimpleLogin
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/designium/simple-login)
+
 simple_login creates a basic and simple login system for Rails 3 apps. It is based on Railscasts Authentication from Scratch videos.
 
 # Demo
