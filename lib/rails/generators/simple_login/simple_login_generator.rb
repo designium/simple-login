@@ -4,6 +4,12 @@ module SimpleLogin
       source_root File.expand_path('../templates', __FILE__)
 
 
+      def create_user
+        generate("model", "user email:string password_digest:string auth_token:string password_reset_token:string password_reset_sent_at:datetime")
+        rake("db:migrate")
+        remove_file "user.rb", "app/models/user.rb"
+      end
+
       def generate_user
         # Copy the controllers for user, sessions and password_reset
         directory "controllers", "app/controllers/"
@@ -32,11 +38,6 @@ module SimpleLogin
         route("resources :users")
         route("resources :sessions")
         route("resources :password_resets")
-      end
-
-      def create_user
-        generate("model", "user email:string password_digest:string auth_token:string password_reset_token:string password_reset_sent_at:datetime")
-        rake("db:migrate")
       end
 
       def add_gems
